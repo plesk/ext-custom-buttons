@@ -39,6 +39,20 @@ class Modules_CustomButtons_CustomButtons extends pm_Hook_CustomButtons
             'title' => 'Multi Place Button',
             'description' => 'Description for multi place button',
             'link' => pm_Context::getBaseUrl() . 'index.php/index/another',
+        ], [
+            'place' => self::PLACE_DOMAIN,
+            'targetId' => 'buttonBackup',
+            'hidden' => true,
+        ], [
+            'place' => self::PLACE_DOMAIN,
+            'targetId' => 'buttonLogs',
+            'hidden' => true,
+        ], [
+            'place' => self::PLACE_DOMAIN,
+            'targetId' => 'buttonSitebuilder',
+            'title' => 'Sitebuilder',
+            'description' => 'My Sitebuilder',
+            'link' => '/todo',
         ]];
     }
 
