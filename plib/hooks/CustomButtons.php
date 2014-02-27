@@ -10,7 +10,7 @@ class Modules_CustomButtons_CustomButtons extends pm_Hook_CustomButtons
             'title' => pm_Locale::lmsg('commonButtonTitle'),
             'description' => pm_Locale::lmsg('commonButtonDescription'),
             'icon' => pm_Context::getBaseUrl() . 'images/icon.png',
-            'link' => pm_Context::getBaseUrl() . 'index.php/index/index',
+            'link' => pm_Context::getActionUrl('index'),
         ], [
             'place' => self::PLACE_ADMIN_HOME,
             'title' => 'Admin Home Button',
@@ -23,13 +23,13 @@ class Modules_CustomButtons_CustomButtons extends pm_Hook_CustomButtons
             'title' => 'Customer Home Button',
             'description' => 'Description for customer home button',
             'icon' => pm_Context::getBaseUrl() . 'images/icon.png',
-            'link' => pm_Context::getBaseUrl() . 'index.php/index/index',
+            'link' => pm_Context::getActionUrl('index'),
         ], [
             'place' => self::PLACE_DOMAIN,
             'title' => 'Domain Button',
             'description' => 'Description for domain button',
             'icon' => pm_Context::getBaseUrl() . 'images/icon.png',
-            'link' => pm_Context::getBaseUrl() . 'index.php/index/index',
+            'link' => pm_Context::getActionUrl('index'),
         ], [
             'place' => [
                 self::PLACE_HOSTING_PANEL_NAVIGATION,
@@ -38,21 +38,26 @@ class Modules_CustomButtons_CustomButtons extends pm_Hook_CustomButtons
             ],
             'title' => 'Multi Place Button',
             'description' => 'Description for multi place button',
-            'link' => pm_Context::getBaseUrl() . 'index.php/index/another',
+            'link' => pm_Context::getActionUrl('index', 'another'),
         ], [
             'place' => self::PLACE_DOMAIN,
             'targetId' => 'buttonBackup',
             'hidden' => true,
         ], [
-            'place' => self::PLACE_DOMAIN,
+            'place' => self::PLACE_DOMAIN_PROPERTIES,
             'targetId' => 'buttonLogs',
             'hidden' => true,
         ], [
-            'place' => self::PLACE_DOMAIN,
+            'place' => self::PLACE_DOMAIN_PROPERTIES,
             'targetId' => 'buttonSitebuilder',
             'title' => 'Sitebuilder',
             'description' => 'My Sitebuilder',
-            'link' => '/todo',
+            'link' => pm_Context::getActionUrl('index'),
+        ], [
+            'place' => self::PLACE_DOMAIN_PROPERTIES,
+            'title' => 'Domain Properties Button',
+            'description' => 'Description for domain properties button',
+            'link' => pm_Context::getActionUrl('index', 'another'),
         ]];
     }
 
