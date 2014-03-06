@@ -3,7 +3,7 @@
 class Modules_CustomButtons_CustomButtons extends pm_Hook_CustomButtons
 {
 
-    public static function getButtons()
+    public function getButtons()
     {
         return [[
             'place' => self::PLACE_COMMON,
