@@ -2,5 +2,5 @@
 
 $messages = [
     'commonButtonTitle' => 'Common Button',
-    'commonButtonDescription' => 'Description for common button',
+    'commonButtonDescription' => 'Description of a common button.',
 ];
