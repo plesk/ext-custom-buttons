@@ -47,17 +47,20 @@ class Modules_CustomButtons_CustomButtons extends pm_Hook_CustomButtons
             'place' => self::PLACE_DOMAIN_PROPERTIES,
             'targetId' => 'buttonLogs',
             'hidden' => true,
+            'contextParams' => true,
         ], [
             'place' => self::PLACE_DOMAIN_PROPERTIES,
             'targetId' => 'buttonSitebuilder',
             'title' => 'Sitebuilder',
             'description' => 'My Sitebuilder',
             'link' => pm_Context::getActionUrl('index'),
+            'contextParams' => true,
         ], [
             'place' => self::PLACE_DOMAIN_PROPERTIES,
             'title' => 'Domain Properties Button',
             'description' => 'Description for domain properties button',
             'link' => pm_Context::getActionUrl('index', 'another'),
+            'contextParams' => true,
         ]];
     }
 
