@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright 1999-2014. Parallels IP Holdings GmbH. All Rights Reserved. -->
+<!-- Copyright 1999-2014. Parallels IP Holdings GmbH. -->
 <module>
   <id>custom-buttons</id>
   <name>Custom Buttons Examples</name>
   <description>Demonstrates how to add custom buttons.</description>
   <version>1.0</version>
-  <release>5</release>
+  <release>6</release>
   <vendor>Parallels, Inc.</vendor>
   <plesk_min_version>12.0.11</plesk_min_version>
 </module>
