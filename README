@@ -1,0 +1,9 @@
+Custom Buttons Examples
+
+A test extension intended to demonstrate how to add custom buttons to various places inside Plesk.
+
+The following techniques are demonstrated:
+* Creation of custom button for particular place.
+* Creation of custom button for multiple places.
+* Creation of local link.
+* Creation of external link.
