@@ -61,6 +61,19 @@ class Modules_CustomButtons_CustomButtons extends pm_Hook_CustomButtons
             'description' => 'Description for domain properties button',
             'link' => pm_Context::getActionUrl('index', 'another'),
             'contextParams' => true,
+        ], [
+            'place' => self::PLACE_TOOLBAR,
+            'id' => 'toolbox-button-id',
+            'title' => 'Toolbar Button',
+            'description' => 'Description for toolbar button',
+            'icon' => pm_Context::getBaseUrl() . 'images/icon.png',
+            'link' => pm_Context::getActionUrl('index', 'another'),
+            'visibility' => function($options) {
+                if (isset($options['controller']) && 'email-address' == $options['controller']) {
+                    return true;
+                }
+                return false;
+            },
         ]];
     }
 
