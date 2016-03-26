@@ -16,7 +16,7 @@ class Modules_CustomButtons_CustomButtons extends pm_Hook_CustomButtons
             'title' => 'Admin Home Button',
             'description' => 'Description for admin home button',
             'icon' => pm_Context::getBaseUrl() . 'images/icon.png',
-            'link' => 'http://www.parallels.com/',
+            'link' => 'http://www.plesk.com/',
             'newWindow' => true,
         ], [
             'place' => self::PLACE_CUSTOMER_HOME,
