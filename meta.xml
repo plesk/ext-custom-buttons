@@ -7,6 +7,6 @@
   <url>https://github.com/plesk/ext-custom-buttons</url>
   <version>1.2</version>
   <release>0</release>
-  <vendor>Parallels</vendor>
+  <vendor>Plesk</vendor>
   <plesk_min_version>12.0.11</plesk_min_version>
 </module>
