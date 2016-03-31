@@ -80,6 +80,48 @@ class Modules_CustomButtons_CustomButtons extends pm_Hook_CustomButtons
             ];
         }
 
+        if (version_compare(pm_ProductInfo::getVersion(), '17.0') >= 0) {
+            $newButtons = [[
+                'place' => self::PLACE_ADMIN_TOOLS_AND_SETTINGS,
+                'section' => 'mailButtons',
+                'order' => 1,
+                'title' => 'Mail Settings Button',
+                'description' => 'Description for Mail Settings Button',
+                'link' => pm_Context::getActionUrl('index', 'another'),
+            ], [
+                'place' => self::PLACE_ADMIN_NAVIGATION ,
+                'section' => 'hosting',
+                'order' => null,
+                'title' => 'Admin Navigation Button',
+                'description' => 'Description for Admin Navigation Button',
+                'link' => pm_Context::getActionUrl('index', 'another'),
+            ], [
+                'place' => self::PLACE_RESELLER_NAVIGATION,
+                'section' => 'profile',
+                'order' => 3,
+                'title' => 'Reseller Navigation Button',
+                'description' => 'Description for Navigation Button',
+                'link' => pm_Context::getActionUrl('index', 'another'),
+            ], [
+                'place' => self::PLACE_DOMAIN_PROPERTIES,
+                'order' => 1,
+                'title' => 'Domain Properties Button',
+                'additionalComments' => 'Additional comment for Domain Properties Button',
+                'description' => 'Description for domain properties button',
+                'link' => pm_Context::getActionUrl('index', 'another'),
+                'contextParams' => true,
+            ], [
+                'place' => self::PLACE_RESELLER_TOOLS_AND_SETTINGS,
+                'section' => 'toolsButtons',
+                'order' => 5,
+                'title' => 'Reseller Tools And Settings button',
+                'additionalComments' => 'Additional comment for Reseller Tools And Settings button',
+                'description' => 'Description for Reseller Tools And Settings button',
+                'link' => pm_Context::getActionUrl('index', 'another'),
+                'contextParams' => true,
+            ]];
+            $buttons = array_merge($buttons, $newButtons);
+        }
         return $buttons;
     }
 
