@@ -7,8 +7,21 @@ class Modules_CustomButtons_CustomButtons extends pm_Hook_CustomButtons
     {
         $buttons = [[
             'place' => self::PLACE_COMMON,
+            'order' => 2,
             'title' => pm_Locale::lmsg('commonButtonTitle'),
             'description' => pm_Locale::lmsg('commonButtonDescription'),
+            'icon' => pm_Context::getBaseUrl() . 'images/icon.png',
+            'link' => pm_Context::getActionUrl('index'),
+        ], [
+            'place' => self::PLACE_COMMON,
+            'order' => 3,
+            'title' => 'Common Button #2',
+            'icon' => pm_Context::getBaseUrl() . 'images/icon.png',
+            'link' => pm_Context::getActionUrl('index'),
+        ], [
+            'place' => self::PLACE_COMMON,
+            'order' => 4,
+            'title' => 'Common Button #3',
             'icon' => pm_Context::getBaseUrl() . 'images/icon.png',
             'link' => pm_Context::getActionUrl('index'),
         ], [
@@ -61,6 +74,20 @@ class Modules_CustomButtons_CustomButtons extends pm_Hook_CustomButtons
             'description' => 'Description for domain properties button',
             'link' => pm_Context::getActionUrl('index', 'another'),
             'contextParams' => true,
+        ], [
+            'place' => self::PLACE_RESELLER_HOME,
+            'title' => 'Reseller Home Button',
+            'description' => 'Description for Reseller home button',
+            'icon' => pm_Context::getBaseUrl() . 'images/icon.png',
+            'link' => 'http://www.plesk.com/',
+            'newWindow' => true,
+        ], [
+            'place' => self::PLACE_ADMIN_TOOLS_AND_SETTINGS,
+            'title' => 'Tools and settings button',
+            'section' => 'securityPanel-tools-list',
+            'order' => 3,
+            'description' => 'Description for multi place button',
+            'link' => pm_Context::getActionUrl('index', 'another'),
         ]];
 
         if (version_compare(pm_ProductInfo::getVersion(), '12.1') >= 0) {
@@ -84,14 +111,14 @@ class Modules_CustomButtons_CustomButtons extends pm_Hook_CustomButtons
             $newButtons = [[
                 'place' => self::PLACE_ADMIN_TOOLS_AND_SETTINGS,
                 'section' => 'mailButtons',
-                'order' => 1,
+                'order' => 6,
                 'title' => 'Mail Settings Button',
                 'description' => 'Description for Mail Settings Button',
                 'link' => pm_Context::getActionUrl('index', 'another'),
             ], [
                 'place' => self::PLACE_ADMIN_NAVIGATION ,
                 'section' => 'hosting',
-                'order' => null,
+                'order' => 4,
                 'title' => 'Admin Navigation Button',
                 'description' => 'Description for Admin Navigation Button',
                 'link' => pm_Context::getActionUrl('index', 'another'),
