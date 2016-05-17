@@ -146,6 +146,30 @@ class Modules_CustomButtons_CustomButtons extends pm_Hook_CustomButtons
                 'description' => 'Description for Reseller Tools And Settings button',
                 'link' => pm_Context::getActionUrl('index', 'another'),
                 'contextParams' => true,
+            ], [
+                'place' => self::PLACE_RESELLER_TOOLS_AND_SETTINGS,
+                'section' => self::SECTION_RESELLER_TOOLS_SERVICES,
+                'title' => 'Reseller Tools and Utilities',
+                'additionalComments' => 'Additional comment for Reseller Tools and Utilities button',
+                'description' => 'Description for Reseller Tools and Utilities button',
+                'link' => pm_Context::getActionUrl('index', 'another'),
+                'contextParams' => true,
+            ], [
+                'place' => self::PLACE_RESELLER_TOOLS_AND_SETTINGS,
+                'section' => self::SECTION_RESELLER_TOOLS_RESOURCES,
+                'title' => 'Reseller Tools and Utilities',
+                'additionalComments' => 'Additional comment for Reseller Tools and Utilities button',
+                'description' => 'Description for Reseller Tools and Utilities button',
+                'link' => pm_Context::getActionUrl('index', 'another'),
+                'contextParams' => true,
+            ], [
+                'place' => self::PLACE_RESELLER_TOOLS_AND_SETTINGS,
+                'section' => self::SECTION_RESELLER_TOOLS_ADDITIONAL_SERVICES,
+                'title' => 'Reseller Tools and Utilities',
+                'additionalComments' => 'Additional comment for Reseller Tools and Utilities button',
+                'description' => 'Description for Reseller Tools and Utilities button',
+                'link' => pm_Context::getActionUrl('index', 'another'),
+                'contextParams' => true,
             ]];
             $buttons = array_merge($buttons, $newButtons);
         }
