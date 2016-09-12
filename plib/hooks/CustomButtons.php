@@ -46,6 +46,7 @@ class Modules_CustomButtons_CustomButtons extends pm_Hook_CustomButtons
         ], [
             'place' => [
                 self::PLACE_HOSTING_PANEL_NAVIGATION,
+                self::PLACE_HOSTING_PANEL_TABS,
                 self::PLACE_ADMIN_TOOLS_AND_SETTINGS,
                 self::PLACE_RESELLER_TOOLS_AND_SETTINGS,
             ],
