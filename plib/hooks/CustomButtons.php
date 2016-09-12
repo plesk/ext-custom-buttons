@@ -111,7 +111,7 @@ class Modules_CustomButtons_CustomButtons extends pm_Hook_CustomButtons
             $newButtons = [[
                 'place' => self::PLACE_ADMIN_TOOLS_AND_SETTINGS,
                 'section' => 'mailButtons',
-                'order' => 6,
+                'order' => 2,
                 'title' => 'Mail Settings Button',
                 'description' => 'Description for Mail Settings Button',
                 'link' => pm_Context::getActionUrl('index', 'another'),
