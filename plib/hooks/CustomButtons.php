@@ -44,12 +44,12 @@ class Modules_CustomButtons_CustomButtons extends pm_Hook_CustomButtons
             'icon' => pm_Context::getBaseUrl() . 'images/icon.png',
             'link' => pm_Context::getActionUrl('index'),
         ], [
-            'place' => [
+            'place' => array_filter([
                 self::PLACE_HOSTING_PANEL_NAVIGATION,
-                self::PLACE_HOSTING_PANEL_TABS,
+                version_compare(pm_ProductInfo::getVersion(), '17.0') >= 0 ? self::PLACE_HOSTING_PANEL_TABS : null,
                 self::PLACE_ADMIN_TOOLS_AND_SETTINGS,
                 self::PLACE_RESELLER_TOOLS_AND_SETTINGS,
-            ],
+            ]),
             'title' => 'Multi Place Button',
             'description' => 'Description for multi place button',
             'link' => pm_Context::getActionUrl('index', 'another'),
