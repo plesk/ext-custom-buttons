@@ -4,9 +4,10 @@
   <id>custom-buttons</id>
   <name>Custom Buttons Examples</name>
   <description>Demonstrates how to add custom buttons.</description>
+  <category>example</category>
   <url>https://github.com/plesk/ext-custom-buttons</url>
   <version>1.4</version>
-  <release>0</release>
+  <release>1</release>
   <vendor>Plesk</vendor>
   <plesk_min_version>12.0.11</plesk_min_version>
 </module>
