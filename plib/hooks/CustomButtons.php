@@ -1,5 +1,5 @@
 <?php
-// Copyright 1999-2016. Parallels IP Holdings GmbH.
+// Copyright 1999-2017. Plesk International GmbH.
 class Modules_CustomButtons_CustomButtons extends pm_Hook_CustomButtons
 {
 
