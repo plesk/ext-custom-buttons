@@ -7,7 +7,7 @@
   <category>example</category>
   <url>https://github.com/plesk/ext-custom-buttons</url>
   <version>1.4</version>
-  <release>1</release>
+  <release>2</release>
   <vendor>Plesk</vendor>
   <plesk_min_version>12.0.11</plesk_min_version>
 </module>

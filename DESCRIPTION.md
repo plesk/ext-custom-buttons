@@ -1,0 +1,1 @@
+This an example extension demonstrating how to add custom buttons to a particular place in the Plesk UI.
