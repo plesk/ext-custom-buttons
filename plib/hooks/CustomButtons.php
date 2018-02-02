@@ -174,6 +174,25 @@ class Modules_CustomButtons_CustomButtons extends pm_Hook_CustomButtons
             ]];
             $buttons = array_merge($buttons, $newButtons);
         }
+
+        if (version_compare(pm_ProductInfo::getVersion(), '17.8.10') >= 0) {
+            $buttons[] = [
+                'place' => static::PLACE_HEADER_NAVIGATION,
+                'title' => 'Header #1',
+                'description' => 'Description for Header Navigation button',
+                'icon' => pm_Context::getBaseUrl() . 'images/icon.png',
+                'link' => pm_Context::getActionUrl('index', 'another'),
+            ];
+            $buttons[] = [
+                'place' => static::PLACE_HEADER_NAVIGATION,
+                'title' => 'Header #2',
+                'icon' => pm_Context::getBaseUrl() . 'images/icon.png',
+                'link' => pm_Context::getActionUrl('index', 'another'),
+                'newWindow' => true,
+                'visibility' => function() {return pm_Session::getClient()->isAdmin();},
+            ];
+        }
+
         return $buttons;
     }
 
