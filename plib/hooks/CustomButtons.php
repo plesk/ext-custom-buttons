@@ -1,5 +1,5 @@
 <?php
-// Copyright 1999-2017. Plesk International GmbH.
+// Copyright 1999-2019. Plesk International GmbH.
 class Modules_CustomButtons_CustomButtons extends pm_Hook_CustomButtons
 {
 
@@ -186,6 +186,17 @@ class Modules_CustomButtons_CustomButtons extends pm_Hook_CustomButtons
                 'link' => pm_Context::getActionUrl('index', 'another'),
                 'newWindow' => true,
                 'visibility' => function() {return pm_Session::getClient()->isAdmin();},
+            ];
+        }
+
+        if (version_compare(pm_ProductInfo::getVersion(), '18.0.19') >= 0) {
+            $buttons[] = [
+                'place' => static::PLACE_DOMAIN_PROPERTIES_DYNAMIC,
+                'section' => static::SECTION_DOMAIN_PROPS_DYNAMIC_DEV_TOOLS,
+                'title' => 'My Dev Tool',
+                'description' => 'Description for Dev Tools section button',
+                'icon' => pm_Context::getBaseUrl() . 'images/icon.png',
+                'link' => pm_Context::getActionUrl('index', 'another'),
             ];
         }
 
