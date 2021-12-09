@@ -200,6 +200,16 @@ class Modules_CustomButtons_CustomButtons extends pm_Hook_CustomButtons
             ];
         }
 
+        if (defined('static::PLACE_DOMAIN_HEADER_DYNAMIC')) {
+            $buttons[] = [
+                'place' => static::PLACE_DOMAIN_HEADER_DYNAMIC,
+                'title' => 'Domain Header Button',
+                'description' => 'Description for Domain Header Button',
+                'icon' => pm_Context::getBaseUrl() . 'images/icon.png',
+                'link' => pm_Context::getActionUrl('index', 'another'),
+            ];
+        }
+
         return $buttons;
     }
 
