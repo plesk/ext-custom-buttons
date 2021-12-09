@@ -1,5 +1,5 @@
 <?php
-// Copyright 1999-2019. Plesk International GmbH.
+// Copyright 1999-2021. Plesk International GmbH.
 class Modules_CustomButtons_CustomButtons extends pm_Hook_CustomButtons
 {
 
@@ -195,6 +195,16 @@ class Modules_CustomButtons_CustomButtons extends pm_Hook_CustomButtons
                 'section' => static::SECTION_DOMAIN_PROPS_DYNAMIC_DEV_TOOLS,
                 'title' => 'My Dev Tool',
                 'description' => 'Description for Dev Tools section button',
+                'icon' => pm_Context::getBaseUrl() . 'images/icon.png',
+                'link' => pm_Context::getActionUrl('index', 'another'),
+            ];
+        }
+
+        if (defined('static::PLACE_DOMAIN_HEADER_DYNAMIC')) {
+            $buttons[] = [
+                'place' => static::PLACE_DOMAIN_HEADER_DYNAMIC,
+                'title' => 'Domain Header Button',
+                'description' => 'Description for Domain Header Button',
                 'icon' => pm_Context::getBaseUrl() . 'images/icon.png',
                 'link' => pm_Context::getActionUrl('index', 'another'),
             ];
