@@ -1,5 +1,5 @@
 <?php
-// Copyright 1999-2019. Plesk International GmbH.
+// Copyright 1999-2021. Plesk International GmbH.
 class Modules_CustomButtons_CustomButtons extends pm_Hook_CustomButtons
 {
 
