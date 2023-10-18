@@ -210,6 +210,32 @@ class Modules_CustomButtons_CustomButtons extends pm_Hook_CustomButtons
             ];
         }
 
+        if (version_compare(pm_ProductInfo::getVersion(), '18.0.57') >= 0) {
+            $buttons[] = [
+                'place' => static::PLACE_DOMAIN_HEADER_DYNAMIC,
+                'title' => "Additional Domain Header Button (no group)",
+                'description' => "Description for Additional Domain Header Button (no group)",
+                'icon' => pm_Context::getBaseUrl() . 'images/icon.png',
+                'link' => pm_Context::getActionUrl('index', 'another'),
+                'isAdditional' => true,
+            ];
+
+            // 3 groups with 3 buttons in each
+            foreach (['group_1', 'group_2', 'group_3'] as $group) {
+                for ($i = 1; $i <= 3; $i++) {
+                    $buttons[] = [
+                        'place' => static::PLACE_DOMAIN_HEADER_DYNAMIC,
+                        'title' => "Additional Domain Header Button ($group-$i)",
+                        'description' => "Description for Additional Domain Header Button ($group-$i)",
+                        'icon' => pm_Context::getBaseUrl() . 'images/icon.png',
+                        'link' => pm_Context::getActionUrl('index', 'another'),
+                        'isAdditional' => true,
+                        'group' => $group,
+                    ];
+                }
+            }
+        }
+
         return $buttons;
     }
 
